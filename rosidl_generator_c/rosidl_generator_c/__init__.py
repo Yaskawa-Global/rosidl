@@ -31,7 +31,11 @@ from rosidl_pycommon import generate_files
 def generate_c(generator_arguments_file, disable_description_codegen=False):
     mapping = {
         'idl.h.em': '%s.h',
-        'idl__description.c.em': 'detail/%s__description.c',
+        #'idl__description.c.em': 'detail/%s__description.c',
+        'idl__description_get_description.c.em': 'detail/%s__description_get_description.c',
+        'idl__description_get_type_hash.c.em': 'detail/%s__description_get_type_hash.c',
+        'idl__description_get_individual_source.c.em': 'detail/%s__description_get_individual_source.c',
+        'idl__description_get_sources.c.em': 'detail/%s__description_get_sources.c',
         #'idl__functions.c.em': 'detail/%s__functions.c',
         'idl__functions_are_equal.c.em': 'detail/%s__functions_are_equal.c',
         'idl__functions_copy.c.em': 'detail/%s__functions_copy.c',
@@ -48,7 +52,9 @@ def generate_c(generator_arguments_file, disable_description_codegen=False):
         'idl__functions_seq_init.c.em': 'detail/%s__functions_seq_init.c',
         'idl__functions.h.em': 'detail/%s__functions.h',
         'idl__struct.h.em': 'detail/%s__struct.h',
-        'idl__type_support.c.em': 'detail/%s__type_support.c',
+        #'idl__type_support.c.em': 'detail/%s__type_support.c',
+        'idl__type_support_create.c.em': 'detail/%s__type_support_create.c',
+        'idl__type_support_destroy.c.em': 'detail/%s__type_support_destroy.c',
         'idl__type_support.h.em': 'detail/%s__type_support.h',
     }
     return generate_files(
